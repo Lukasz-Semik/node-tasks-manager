@@ -20,6 +20,6 @@ app.post('/todos', (req, res) => {
     .catch(error => res.status(400).send(error));
 });
 
-app.listen(3000, () => {
-  console.log('on 3000');
+app.listen(8000, () => {
+  console.log('on 8000');
 });
