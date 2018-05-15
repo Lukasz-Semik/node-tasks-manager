@@ -1,0 +1,3 @@
+heroku create <name>
+heroku addons:create mongolab:sandbox
+heroku config do sprawdzenia zmiennych srodowiskowych
