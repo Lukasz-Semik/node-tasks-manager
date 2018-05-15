@@ -6,7 +6,9 @@ const { mongoose } = require('./db/mongoose');
 const { Todo } = require('./models/todo');
 const { User } = require('./models/user');
 
+const port = process.env.PORT || 8000;
 const app = express();
+
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
@@ -44,8 +46,8 @@ app.get('/todos/:id', (req, res) => {
   }).catch(e => res.status(400).send())
 });
 
-app.listen(8000, () => {
-  console.log('on 8000');
+app.listen(port, () => {
+  console.log(`on ${port}`);
 });
 
 module.exports = {
